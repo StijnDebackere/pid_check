@@ -1,0 +1,7 @@
+pid_file = "/var/tmp/pid-check-pids.json"
+# ttl = 86400
+check_interval = 30
+[method]
+        [method.email]
+        email_address = "stijndebackere93@gmail.com"
+
