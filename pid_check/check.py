@@ -13,7 +13,7 @@ def find_finished_pids(pid_file):
     for entry in watch_list:
         if psutil.pid_exists(entry.pid):
             # pid assigned to new process
-            if psutil.Process(entry.pid).name() != entry.name():
+            if psutil.Process(entry.pid).name() != entry.name:
                 done.append(entry)
         else:
             # pid has finished
