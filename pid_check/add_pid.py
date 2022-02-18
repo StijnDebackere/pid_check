@@ -18,15 +18,16 @@ parser = argparse.ArgumentParser(
     description="Run a daemon to check when PIDs finish."
 )
 parser.add_argument(
+    "pids",
+    type=int,
+    nargs="+",
+    help="pids to watch"
+)
+parser.add_argument(
     "-c", "--config",
     default=f"{Path(__file__).parent / 'config.toml'}",
     type=str,
     help="configuration file for daemon",
-)
-parser.add_argument(
-    "-p", "--pid",
-    type=int,
-    help="pid to watch"
 )
 
 
@@ -51,7 +52,8 @@ def main():
     pid_file = config["pid_file"]
     method = list(config["method"].keys())[0]
 
-    add_pid(args.pid, pid_file=pid_file, method=method)
+    for pid in args.pids:
+        add_pid(pid, pid_file=pid_file, method=method)
 
 
 if __name__ == "__main__":
