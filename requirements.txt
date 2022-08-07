@@ -1,0 +1,6 @@
+docutils==0.19
+lockfile==0.12.2
+-e git+https://github.com/StijnDebackere/pid_check.git@2ee6287bd54776f03e0ee57a8cd559a8fe82f12f#egg=pid_check
+psutil==5.9.1
+python-daemon==2.3.1
+toml==0.10.2
