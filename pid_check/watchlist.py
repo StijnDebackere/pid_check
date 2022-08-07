@@ -8,7 +8,7 @@ from typing import Set
 class Entry:
     """Class for PID entries to check status off"""
     pid: int
-    name: int
+    name: str
     method: str
 
     def __hash__(self):

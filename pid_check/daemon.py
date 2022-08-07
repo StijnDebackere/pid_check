@@ -6,12 +6,9 @@ import sys
 import time
 
 import daemon
-import psutil
 import toml
 
 from .check import check_pids
-from .notifications import notify
-from .watchlist import Entry, WatchList
 
 
 parser = argparse.ArgumentParser(

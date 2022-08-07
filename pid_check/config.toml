@@ -4,4 +4,3 @@ check_interval = 30
 [method]
         [method.email]
         email_address = "your@email.com"
-

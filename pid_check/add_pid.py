@@ -1,16 +1,10 @@
 #!/usr/bin/env python3
 import argparse
-import os
 from pathlib import Path
-import sys
-import time
 
-import daemon
 import psutil
 import toml
 
-from .check import check_pids
-from .notifications import notify
 from .watchlist import Entry, WatchList
 
 
